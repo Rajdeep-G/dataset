@@ -1,0 +1,152 @@
+{
+    "children": [
+        {
+            "name": "movies",
+            "children": [
+                {
+                    "name": "action",
+                    "children": [
+                        {
+                            "name": "SuperheroFilms",
+                            "value": 12453
+                        },
+                        {
+                            "name": "MartialArts",
+                            "value": 5632
+                        },
+                        {
+                            "name": "SpyThrillers",
+                            "value": 7845
+                        },
+                        {
+                            "name": "HeistMovies",
+                            "value": 4521
+                        },
+                        {
+                            "name": "DisasterFilms",
+                            "value": 3654
+                        }
+                    ]
+                },
+                {
+                    "name": "drama",
+                    "children": [
+                        {
+                            "name": "PeriodDrama",
+                            "value": 6789
+                        },
+                        {
+                            "name": "PsychologicalThrillers",
+                            "value": 8901
+                        },
+                        {
+                            "name": "BiographicalFilms",
+                            "value": 7654
+                        },
+                        {
+                            "name": "FamilyDrama",
+                            "value": 5432
+                        }
+                    ]
+                },
+                {
+                    "name": "animation",
+                    "children": [
+                        {
+                            "name": "Pixar",
+                            "value": 9876
+                        },
+                        {
+                            "name": "Anime",
+                            "value": 8765
+                        },
+                        {
+                            "name": "StopMotion",
+                            "value": 3421
+                        },
+                        {
+                            "name": "TraditionalAnimation",
+                            "value": 4567
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "sports",
+            "children": [
+                {
+                    "name": "teamSports",
+                    "children": [
+                        {
+                            "name": "Football",
+                            "value": 15678
+                        },
+                        {
+                            "name": "Basketball",
+                            "value": 14567
+                        },
+                        {
+                            "name": "Baseball",
+                            "value": 12345
+                        },
+                        {
+                            "name": "Hockey",
+                            "value": 9876
+                        },
+                        {
+                            "name": "Soccer",
+                            "value": 13456
+                        }
+                    ]
+                },
+                {
+                    "name": "individualSports",
+                    "children": [
+                        {
+                            "name": "Tennis",
+                            "value": 8901
+                        },
+                        {
+                            "name": "Golf",
+                            "value": 7890
+                        },
+                        {
+                            "name": "Swimming",
+                            "value": 6789
+                        },
+                        {
+                            "name": "Athletics",
+                            "value": 9012
+                        }
+                    ]
+                },
+                {
+                    "name": "extremeSports",
+                    "children": [
+                        {
+                            "name": "Skateboarding",
+                            "value": 5678
+                        },
+                        {
+                            "name": "Surfing",
+                            "value": 4567
+                        },
+                        {
+                            "name": "Snowboarding",
+                            "value": 6543
+                        },
+                        {
+                            "name": "RockClimbing",
+                            "value": 3456
+                        },
+                        {
+                            "name": "BMX",
+                            "value": 2345
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
