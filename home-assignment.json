@@ -6,35 +6,42 @@
     "pieChartData": {
         "timeSeriesData": [
             {
-                "period": 1,
-                "values": {
-                    "apples": 10,
-                    "oranges": 20
-                }
+                "head": 10,
+                "tail": 5
             },
             {
-                "period": 2,
-                "values": {
-                    "apples": 20,
-                    "oranges": 10
-                }
+                "head": 20,
+                "tail": 100
             },
             {
-                "period": 3,
-                "values": {
-                    "apples": 5,
-                    "oranges": 40
-                }
+                "head": 10,
+                "tail": 200
             },
             {
-                "period": 4,
-                "values": {
-                    "apples": 40,
-                    "oranges": 10
-                }
+                "head": 50,
+                "tail": 30
+            },
+            {
+                "head": 15,
+                "tail": 60
+            },
+            {
+                "head": 5,
+                "tail": 40
+            },
+            {
+                "head": 5,
+                "tail": 10
+            },
+            {
+                "head": 20,
+                "tail": 100
             }
         ],
-        "categories": ["apples", "oranges"]
+        "categories": [
+            "head",
+            "tail"
+        ]
     },
     "scatterPlotData": {
         "clusters": [
@@ -42,54 +49,210 @@
                 "id": 0,
                 "name": "Cluster A",
                 "points": [
-                    { "id": "c0_1", "x": 2.5, "y": 2.1, "cluster": 0 },
-                    { "id": "c0_2", "x": 2.7, "y": 2.3, "cluster": 0 },
-                    { "id": "c0_3", "x": 2.8, "y": 2.4, "cluster": 0 },
-                    { "id": "c0_4", "x": 2.6, "y": 2.0, "cluster": 0 },
-                    { "id": "c0_5", "x": 2.4, "y": 2.2, "cluster": 0 },
-                    { "id": "c0_6", "x": 2.9, "y": 2.1, "cluster": 0 },
-                    { "id": "c0_7", "x": 2.3, "y": 2.3, "cluster": 0 },
-                    { "id": "c0_8", "x": 2.7, "y": 2.5, "cluster": 0 },
-                    { "id": "c0_9", "x": 2.5, "y": 2.4, "cluster": 0 },
-                    { "id": "c0_10", "x": 2.8, "y": 2.2, "cluster": 0 }
+                    {
+                        "id": "c0_1",
+                        "x": 2.5,
+                        "y": 2.1,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_2",
+                        "x": 2.7,
+                        "y": 2.3,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_3",
+                        "x": 2.8,
+                        "y": 2.4,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_4",
+                        "x": 2.6,
+                        "y": 2.0,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_5",
+                        "x": 2.4,
+                        "y": 2.2,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_6",
+                        "x": 2.9,
+                        "y": 2.1,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_7",
+                        "x": 2.3,
+                        "y": 2.3,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_8",
+                        "x": 2.7,
+                        "y": 2.5,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_9",
+                        "x": 2.5,
+                        "y": 2.4,
+                        "cluster": 0
+                    },
+                    {
+                        "id": "c0_10",
+                        "x": 2.8,
+                        "y": 2.2,
+                        "cluster": 0
+                    }
                 ]
             },
             {
                 "id": 1,
                 "name": "Cluster B",
                 "points": [
-                    { "id": "c1_1", "x": -2.1, "y": 1.8, "cluster": 1 },
-                    { "id": "c1_2", "x": -2.3, "y": 2.0, "cluster": 1 },
-                    { "id": "c1_3", "x": -2.0, "y": 1.9, "cluster": 1 },
-                    { "id": "c1_4", "x": -2.4, "y": 1.7, "cluster": 1 },
-                    { "id": "c1_5", "x": -2.2, "y": 2.1, "cluster": 1 },
-                    { "id": "c1_6", "x": -2.5, "y": 1.8, "cluster": 1 },
-                    { "id": "c1_7", "x": -2.1, "y": 2.2, "cluster": 1 },
-                    { "id": "c1_8", "x": -2.3, "y": 1.9, "cluster": 1 },
-                    { "id": "c1_9", "x": -2.4, "y": 2.0, "cluster": 1 },
-                    { "id": "c1_10", "x": -2.2, "y": 1.7, "cluster": 1 }
+                    {
+                        "id": "c1_1",
+                        "x": -2.1,
+                        "y": 1.8,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_2",
+                        "x": -2.3,
+                        "y": 2.0,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_3",
+                        "x": -2.0,
+                        "y": 1.9,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_4",
+                        "x": -2.4,
+                        "y": 1.7,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_5",
+                        "x": -2.2,
+                        "y": 2.1,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_6",
+                        "x": -2.5,
+                        "y": 1.8,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_7",
+                        "x": -2.1,
+                        "y": 2.2,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_8",
+                        "x": -2.3,
+                        "y": 1.9,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_9",
+                        "x": -2.4,
+                        "y": 2.0,
+                        "cluster": 1
+                    },
+                    {
+                        "id": "c1_10",
+                        "x": -2.2,
+                        "y": 1.7,
+                        "cluster": 1
+                    }
                 ]
             },
             {
                 "id": 2,
                 "name": "Cluster C",
                 "points": [
-                    { "id": "c2_1", "x": 0.2, "y": -1.8, "cluster": 2 },
-                    { "id": "c2_2", "x": 0.4, "y": -1.9, "cluster": 2 },
-                    { "id": "c2_3", "x": 0.1, "y": -1.7, "cluster": 2 },
-                    { "id": "c2_4", "x": 0.3, "y": -2.0, "cluster": 2 },
-                    { "id": "c2_5", "x": 0.0, "y": -1.8, "cluster": 2 },
-                    { "id": "c2_6", "x": 0.5, "y": -1.7, "cluster": 2 },
-                    { "id": "c2_7", "x": 0.2, "y": -1.9, "cluster": 2 },
-                    { "id": "c2_8", "x": 0.4, "y": -1.8, "cluster": 2 },
-                    { "id": "c2_9", "x": 0.1, "y": -2.0, "cluster": 2 },
-                    { "id": "c2_10", "x": 0.3, "y": -1.7, "cluster": 2 }
+                    {
+                        "id": "c2_1",
+                        "x": 0.2,
+                        "y": -1.8,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_2",
+                        "x": 0.4,
+                        "y": -1.9,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_3",
+                        "x": 0.1,
+                        "y": -1.7,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_4",
+                        "x": 0.3,
+                        "y": -2.0,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_5",
+                        "x": 0.0,
+                        "y": -1.8,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_6",
+                        "x": 0.5,
+                        "y": -1.7,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_7",
+                        "x": 0.2,
+                        "y": -1.9,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_8",
+                        "x": 0.4,
+                        "y": -1.8,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_9",
+                        "x": 0.1,
+                        "y": -2.0,
+                        "cluster": 2
+                    },
+                    {
+                        "id": "c2_10",
+                        "x": 0.3,
+                        "y": -1.7,
+                        "cluster": 2
+                    }
                 ]
             }
         ],
         "settings": {
-            "xDomain": [-3, 3],
-            "yDomain": [-2.5, 2.5]
+            "xDomain": [
+                -3,
+                3
+            ],
+            "yDomain": [
+                -2.5,
+                2.5
+            ]
         }
     },
     "sunburstData": {
