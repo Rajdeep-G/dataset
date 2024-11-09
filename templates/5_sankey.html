@@ -18,11 +18,12 @@
 <body>
     <div id="chart"></div>
     <script>
+        // Define the sankeyDgm function
         function sankeyDgm(data) {
             const width = 928;
             const height = 600;
             const format = d3.format(",.0f");
-            const linkColor = "source"; // Define linkColor here
+            const linkColor = "source"; // "source-target", "source", "target", or a color value
 
             // Create a SVG container.
             const svg = d3.select("#chart").append("svg")
@@ -88,7 +89,7 @@
                     .attr("offset", "100%")
                     .attr("stop-color", d => color(d.target.category));
             }
-
+            // Adds the links to the path.
             link.append("path")
                 .attr("d", d3.sankeyLinkHorizontal())
                 .attr("stroke", linkColor === "source-target" ? (d) => `url(#${d.uid})`
@@ -96,7 +97,7 @@
                         : linkColor === "target" ? (d) => color(d.target.category)
                             : linkColor)
                 .attr("stroke-width", d => Math.max(1, d.width));
-
+            // Adds a title on the links.
             link.append("title")
                 .text(d => `${d.source.name} → ${d.target.name}\n${format(d.value)} TWh`);
 
@@ -112,12 +113,12 @@
                 .text(d => d.name);
         }
 
-        // read data from JSON file from the link "data.json"
-        d3.json("https://raw.githubusercontent.com/Rajdeep-G/dataset/refs/heads/main/energy.json").then(data => {
+        // Load the data and call the sankeyDgm function.
+        d3.json("https://raw.githubusercontent.com/Rajdeep-G/dataset/refs/heads/main/Sankey.json").then(data => {
             sankeyDgm(data);
         });
 
-        // sankeyDgm(data);
+       
     </script>
 </body>
 

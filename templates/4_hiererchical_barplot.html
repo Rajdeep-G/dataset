@@ -17,6 +17,7 @@
 <body>
     <div id="chart"></div>
     <script>
+        // define the dimensions and margins of the graph
         const margin = { top: 30, right: 30, bottom: 0, left: 100 };
         const width = 1628 - margin.left - margin.right;
         const barStep = 50;
@@ -31,19 +32,20 @@
 
         const x = d3.scaleLinear().range([margin.left, width - margin.right]);
         const color = d3.scaleOrdinal([true, false], ["steelblue", "#aaa"]);
-
-        d3.json("https://raw.githubusercontent.com/Rajdeep-G/dataset/refs/heads/main/flare-2.json").then(data => {
+        
+        // function to create the hierarchical barplot
+        function hiererchical_barplot(data) {
             const root = d3.hierarchy(data)
                 .sum(d => d.value)
                 .sort((a, b) => b.value - a.value)
                 .eachAfter(d => d.index = d.parent ? d.parent.index = d.parent.index + 1 || 0 : 0);
-
+            
             const height = Math.max(1, root.children.length) * barStep + margin.top + margin.bottom;
 
             svg.attr("height", height);
 
             x.domain([0, root.value]);
-
+            // function to create the barplot
             svg.append("rect")
                 .attr("class", "background")
                 .attr("fill", "none")
@@ -52,13 +54,13 @@
                 .attr("height", height)
                 .attr("cursor", "pointer")
                 .on("click", (event, d) => up(svg, d));
-
+            // function to create the x-axis
             svg.append("g")
                 .attr("class", "x-axis")
                 .attr("transform", `translate(0,${margin.top})`)
                 .call(d3.axisTop(x).ticks(width / 80, "s"))
                 .call(g => g.select(".domain").remove());
-
+            // function to create the y-axis
             svg.append("g")
                 .attr("class", "y-axis")
                 .attr("transform", `translate(${margin.left + 0.5},0)`)
@@ -68,7 +70,7 @@
                     .attr("y2", height - margin.bottom));
 
             down(svg, root);
-
+            // function to create the bar
             function bar(svg, down, d, selector) {
                 const g = svg.insert("g", selector)
                     .attr("class", "enter")
@@ -95,7 +97,7 @@
 
                 return g;
             }
-
+            // function to create the down transition
             function down(svg, d) {
                 if (!d.children || d3.active(svg.node())) return;
 
@@ -140,7 +142,7 @@
                     .attr("fill", d => color(!!d.children))
                     .attr("width", d => x(d.value) - x(0));
             }
-
+            // function to create the up transition
             function up(svg, d) {
                 if (!d.parent || !svg.selectAll(".exit").empty()) return;
 
@@ -179,7 +181,7 @@
 
                 enter.transition(transition2)
                     .attr("fill-opacity", 1);
-
+                
                 enter.selectAll("rect")
                     .attr("fill", d => color(!!d.children))
                     .attr("fill-opacity", p => p === d ? 0 : null)
@@ -187,25 +189,29 @@
                     .attr("width", d => x(d.value) - x(0))
                     .on("end", function (p) { d3.select(this).attr("fill-opacity", 1); });
             }
-
+            // function to create the stack
             function stack(i) {
                 let value = 0;
                 return d => {
-                    const t = `translate(${x(value) - x(0)},${barStep * i})`;
+                    const t = `translate(${x(value) - x(0)},${barStep * i})`; 
                     value += d.value;
-                    return t;
+                    return t; 
                 };
             }
-
+            // function to create the stagger
             function stagger() {
                 let value = 0;
                 return (d, i) => {
-                    const t = `translate(${x(value) - x(0)},${barStep * i})`;
+                    const t = `translate(${x(value) - x(0)},${barStep * i})`; // x(value) - x(0) is the width of the bar
                     value += d.value;
-                    return t;
+                    return t; // translate the bar to the right
                 };
             }
+        }
+        d3.json("https://raw.githubusercontent.com/Rajdeep-G/dataset/refs/heads/main/Hierarchical-barchart.json").then(data => {
+            hiererchical_barplot(data);
         });
+
     </script>
 </body>
 
